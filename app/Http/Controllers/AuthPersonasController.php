@@ -35,7 +35,7 @@ public function login(Request $request){
     if ($persona) {
         // INICIO DE SESION
         Auth::login($persona);
-        return redirect()->intended('/welcome');
+        return redirect()->intended('/resultados');
     }
 
     return back()->withErrors([

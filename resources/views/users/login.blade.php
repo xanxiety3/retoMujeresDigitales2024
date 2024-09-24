@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar sesión</title>
     <link rel="stylesheet" href="../css/LogIn.css">
+
 </head>
 <body>
     <div class="fondo-formulario-blanco">
@@ -32,12 +33,12 @@
             <button>Iniciar sesión</button>
         </form>
         @if($errors->any())
-        @foreach ($errors->all() as $error )
-        <p>{{ $error }}</p>
-            
-        @endforeach
-        @endif
  
+            <strong style="color: red">Tus datos no son correctos</strong>
+           
+   
+        @endif
+    
     </div>
 </body>
 </html>
