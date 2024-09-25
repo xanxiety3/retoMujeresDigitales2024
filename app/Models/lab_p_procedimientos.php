@@ -13,4 +13,9 @@ class lab_p_procedimientos extends Model
         "id_grupo_laboratorio",
         "metodo"
     ];
+    public function grupo()
+{
+    return $this->belongsTo(lab_p_grupos::class, 'id_grupo_laboratorio');
+}
+
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\gen_m_persona;
+use App\Models\sex_p_lista;
 use App\Models\tipos_p_identificacion;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,8 +13,9 @@ class AuthPersonasController extends Controller
 {
     public function index(){
         // Obtener todos los tipos de documentos
+        $persona= gen_m_persona::all();
         $tiposDocumentos = tipos_p_identificacion::all();
-        return view('users.login', compact('tiposDocumentos'));
+        return view('users.login', compact('tiposDocumentos', 'persona'));
 }
 
 
@@ -47,4 +49,24 @@ public function login(Request $request){
         Auth::logout();
     return view("users.login");
     }
+
+
+    public function show($id)
+{ 
+    // Obtener la persona
+    $persona = gen_m_persona::findOrFail($id);
+    
+    // Obtener tipo de identificación
+    $tipoId = tipos_p_identificacion::find($persona->id_tipoid);
+    
+// para obtener el sexo 
+    $sexoBiologico = sex_p_lista::find($persona->id_sexobiologico);
+    // dd($persona, $tipoId, $sexoBiologico);
+
+    // Pasar los datos a la vista
+    return view('complementos.show', data: compact('persona', 'tipoId', 'sexoBiologico'));
+}
+
+    
+    
 }

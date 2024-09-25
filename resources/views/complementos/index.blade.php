@@ -170,7 +170,10 @@
             <div class="opciones">
                 <div class="opcion2">
                     <a href="#"><img class="iconos" src="../img/icono-perfil-usuario.png" alt="Icono de perfil de usuario"></a>
-                    <a href="#"><h5>Perfil de usuario</h5></a>
+                    @foreach ($persona as $perso)
+                    <a href="persona/{{ $perso->id }}"><h5>Perfil de usuario</h5></a>
+                @endforeach
+                
                 </div>
             </div>
         </div>
@@ -183,7 +186,7 @@
         </div>
         <div class="container mt-5" id="tabla-contenido">
             <h2 class="text-center">Resultados de Pruebas de Laboratorio</h2>
-            
+        
             <!-- Formulario de búsqueda -->
             <form method="GET" class="mb-4">
                 <div class="row">
@@ -213,42 +216,39 @@
                 </form>
             </div>
         
+            <!-- Tabla de Resultados -->
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <th>Fecha</th>
                         <th>Documento</th>
                         <th>Orden</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($resultados as $resultado)
+                    @if($resultados->isEmpty())
                         <tr>
-                            <td>
-                                <p>
-                                    {{ $resultado->fecha }}
-                                </p>
-                            </td>
-                            <td>
-                                <p>
-                                    {{ $resultado->id_documento }}
-                                </p>
-                            </td>
-                            <td>
-                            <p>
-                                {{ $resultado->orden }}
-                            </p>
-                            </td>
+                            <td colspan="4" class="text-center">No se encontraron resultados.</td>
                         </tr>
-                    @endforeach
+                    @else
+                        @foreach ($resultados as $resultado)
+                            <tr>
+                                <td>{{ $resultado->fecha }}</td>
+                                <td>{{ $resultado->id_documento }}</td>
+                                <td>{{ $resultado->orden }}</td>
+                                <td>
+                                    <a href="{{ route('complementos.showResult', $resultado->id) }}" class="btn btn-info">Ver Detalles</a>
+                                </td>
+                            </tr>
+                        @endforeach
+                    @endif
                 </tbody>
             </table>
         
             <!-- Paginación -->
-            {{ $resultados->links() }}
+            <div class="d-flex justify-content-center">
+                {{ $resultados->links() }}
+            </div>
         </div>
-</header>
-
-
-</body>
-</html>
+        
