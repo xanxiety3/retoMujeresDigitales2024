@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E0DFDF;
+    display: flex;
+}
+
+.container {
+    display: flex; /* Contenedor flex */
+    height: 100vh; /* Altura completa de la ventana */
+}
+
+.barra-lateral {
+    height: 99.8vh;
+    position: fixed;
+    width: 15.5vw;
+}
+
+.logo-blanco {
+    width: 10vw;
+    position: fixed;
+    margin-top: 3.5vh;
+    margin-left: 1vw;
+}
+
+.menu {
+    position: fixed; /* Mantener el menú estático */
+    width: 12.7vw; 
+    margin-top: 18vh; /* Espacio desde la parte superior */
+}
+
+.opciones {
+    width: 100%;
+}
+
+.opcion1,.opcion2 {
+    display: flex;
+    justify-content: flex-start; /* Alinear a la izquierda */
+    align-items: center;
+    height: 8vh;
+
+}
+
+.opcion1:hover, .opcion2:hover {
+    background-color: #dddddd;
+}
+
+.iconos {
+    width: 1.5vw;
+    margin-right: 0.5vw;
+    margin-left: 1vw;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+}
+
+.contenido {
+    margin-left: 15.5vw; /* Espacio para el menú */
+    flex: 1; /* Ocupa el resto del espacio */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+
+}
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(78, 78, 78);
+    margin-top: 11vh;
+}
+
+.imagen-de-bienvenida-morada{
+    width: 54vw;
+    height: 54vh;
+    position: absolute;
+    margin-left: 28vw;
+    margin-top: 1.5vh;
+}
+.saludo{
+    position: absolute;
+    margin-top: 31vh;
+    margin-left: -6vw;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 200%;
+    width: 40vw;
+}
+
+.slider-frame{
+    width: 54%;
+    height: auto;
+    overflow: hidden;
+    position: absolute;
+    margin-top: 58vh;
+    margin-left: 28vw;
+
+
+}
+.slider-frame ul{
+    display: flex;
+    width: 300%;
+    animation: slider 7s infinite alternate ease-in-out;
+}
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+
+}
+.slider-frame img{
+    width: 100%;
+}
+@keyframes slider {
+    0% {margin-left: 0%;}
+    20% {margin-left: 0%;}
+
+    40% {margin-left: -100%;}
+    60% {margin-left: -100%;}
+
+    80% {margin-left: -200%;}
+    100% {margin-left: -200%;}
+}
+.informacion-de-paciente{
+    background-color: white;
+    width: 28.5vw;
+    height: 94vh;
+    position: absolute;
+    margin-left: 113.8vw;
+    margin-top: 3vh;
+    border-radius: 20px;
+}
+.fondo-perfil-azul{
+    width: 28.5vw;
+}
+.icono-logo-perfil{
+    width: 15vw;
+    margin-left: 6.4vw;
+    margin-top: -5vh;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #464646;
+    font-size: 99%;
+}
+.nombre-completo{
+    margin-top: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.nombre-completo h1{
+    color: #904b8c;
+    font-size: 130%;
+}
+.informacion{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10vh;
+    gap: 2vh;
+    margin-left: 2.5vw;
+}
+.info{
+    display: flex; 
+    color: rgb(51, 51, 51);
+    display: flex;
+    align-items: center;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;  
+
+}
+#nombre-usuario-imagen{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100%;
+    font-family: Arial, Helvetica, sans-serif;  
+
+}
+h3{
+    font-size: 90%;
+
+}
+.info p{
+    display: flex; 
+    color: rgb(51, 51, 51);
+    display: flex;
+    align-items: center;
+    font-size: 84%;
+    font-family: Arial, Helvetica, sans-serif;  
+    padding-left: 1vw;
+}

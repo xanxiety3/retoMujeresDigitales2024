@@ -9,7 +9,7 @@
 <body>
 
  
-    <div class="container mt-5">
+    <div class="container mt-5">    
         <h2 class="text-center">Resultados de la Orden: {{ $orden->orden }}</h2>
     
 
