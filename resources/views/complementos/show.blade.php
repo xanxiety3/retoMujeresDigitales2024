@@ -14,12 +14,12 @@
         <div class="menu">
             <div class="opciones">
                 <div class="opcion1">
-                    <a href="#"><img class="iconos" src="../img/icono-home.png" alt="Icono-home"></a>
-                    <a href="#"><h5>Home</h5></a>
+                    <a href="/resultados"><img class="iconos" src="../img/icono-home.png" alt="Icono-home"></a>
+                    <a href="/resultados"><h5>Home</h5></a>
                 </div>
                 <div class="opcion2">
-                    <a href="/resultados"><img class="iconos" src="../img/icono-perfil-usuario.png" alt="Icono de perfil de usuario"></a>
-                    <a href="#"><h5>Perfil de usuario</h5></a>
+                    <a href="/persona/{{$persona->id}}"><img class="iconos" src="../img/icono-perfil-usuario.png" alt="Icono de perfil de usuario"></a>
+                    <a href="/persona/{{$persona->id}}"><h5>Perfil de usuario</h5></a>
                 </div>
             </div>
         </div>

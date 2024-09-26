@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #E0DFDF;
+    display: flex;
+}
+
+.container {
+    display: flex; 
+    height: 100vh; 
+}
+
+.barra-lateral {
+    height: 99.8vh;
+    position: fixed;
+    width: 17vw;
+}
+
+.logo-blanco {
+    width: 10vw;
+    position: fixed;
+    margin-top: 3.5vh;
+    margin-left: 1vw;
+}
+
+.menu {
+    position: fixed; 
+    margin-top: 18vh; 
+    width: 20vw;
+}
+
+.opciones {
+    width: 100%;
+}
+
+.opcion1,.opcion2 {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;
+    height: 8vh;
+
+}
+
+.opcion1:hover, .opcion2:hover {
+    background-color: #dddddd;
+}
+
+.iconos {
+    width: 1.5vw;
+    margin-right: 0.5vw;
+    margin-left: 1vw;
+}
+
+a {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 100;
+}
+
+.contenido {
+    margin-left: 15.5vw; 
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+
+}
+.imagen-con-texto-resultados{
+    width: 87.4vw;
+    height: 53vh;
+    position: absolute;
+    margin-left: 81.52vw;
+}
+p{
+    position: absolute;
+    color: white;
+    font-size: 180%;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 45vw;
+    margin-top: 22vh;
+    width: 45vw;
+    height: 5vh;
+}
+
+
+    .resultado {
+        background-color: rgb(120, 120, 204);
+        width: 80vw;
+        position: absolute;
+        margin-top: 50vh; /* Ajusta según tus necesidades */
+      
+        border-radius: 7px;
+        padding: 10px; /* Agregar un padding interno */
+        align-items: center;
+    }
+    
+    .resultado h5 {
+        margin-left: 2vw;
+        margin-top: 4.5vh;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        color: white;
+      
+    }
+    
+    .grupo {
+        gap: 2rem;
+        display: flex;
+    }
+    
+    .prueba-cuadro {
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+        border: 1px solid rgba(255, 255, 255, 0.2); /* Borde más sutil */
+        border-radius: 5px; /* Esquinas redondeadas */
+        padding: 10px; /* Espaciado interno */
+        margin: 10px 0; /* Espaciado entre cuadros */
+    }
+    
+    #procedimiento {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 180%;
+        color: white;
+       
+        margin-top: 3vh;
+        align-items: center;
+        border-right: solid black;
+    }
+    
+.text-center{
+    position: absolute;
+    top: 70vh;
+    left: 50vw;
+}
+.alert {
+    background-color: #d1ecf1; /* Color de fondo */
+    color: #0c5460; /* Color del texto */
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    position: absolute;
+}

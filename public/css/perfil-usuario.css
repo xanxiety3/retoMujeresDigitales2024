@@ -10,14 +10,14 @@ body {
 }
 
 .container {
-    display: flex; /* Contenedor flex */
-    height: 100vh; /* Altura completa de la ventana */
+    display: flex; 
+    height: 100vh; 
 }
 
 .barra-lateral {
     height: 99.8vh;
     position: fixed;
-    width: 15.5vw;
+    width: 17vw;
 }
 
 .logo-blanco {
@@ -28,9 +28,9 @@ body {
 }
 
 .menu {
-    position: fixed; /* Mantener el menú estático */
+    position: fixed; 
     width: 12.7vw; 
-    margin-top: 18vh; /* Espacio desde la parte superior */
+    margin-top: 18vh; 
 }
 
 .opciones {
@@ -39,7 +39,7 @@ body {
 
 .opcion1,.opcion2 {
     display: flex;
-    justify-content: flex-start; /* Alinear a la izquierda */
+    justify-content: flex-start; 
     align-items: center;
     height: 8vh;
 
@@ -64,9 +64,9 @@ a {
 
 .contenido {
     margin-left: 15.5vw; /* Espacio para el menú */
-    flex: 1; /* Ocupa el resto del espacio */
+    flex: 1; 
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
+    justify-content: center;
 
 }
 h4{

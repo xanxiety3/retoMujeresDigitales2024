@@ -45,10 +45,11 @@ public function login(Request $request){
     ]);
 }
 
-    public function logout(){
-        Auth::logout();
-    return view("users.login");
-    }
+    
+public function logout(){
+    Auth::logout();
+    return redirect()->intended('/login');
+}
 
 
     public function show($id)
